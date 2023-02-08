@@ -1,0 +1,290 @@
+:root {
+    /* для CTAs, Focused, Active states, Links, nav-click */
+    --primary-brand-color: #4D5AE5;
+    /* для Overlays, Shadows, Headings, nav-default*/
+    --dark-color: #2E2F42;
+    /* для Valid fields, Success messages */
+    --success-color: #31D0AA;
+    /* для Body text, nav-hover */
+    --text-color: #434455;
+    /* для Helper text, Deemphasized text */
+    --subtle-text-color: #8E8F99;
+    /* для Accent color, Hairlines, Subtle backgrounds*/
+    --accent-color: #E7E9FC;
+    /* для Light mode backgrounds, Light mode Dialogs/alerts*/
+    --light-color: #F4F4FD;
+
+    /*NAV-LINKS*/
+    /* для nav-default*/
+    --nav-defauit: #2E2F42;
+    /* для nav-hover*/
+    --nav-hover: #434455;
+    /* для nav-click*/
+    --nav-click: #4D5AE5;
+
+    /*BUTTONS*/
+    /* для button--order-default*/
+    --button-order-defauit: #4D5AE5;
+    /* для button--order-hover*/
+    --button-order-hover: #4D5AE5;
+    /* для button--order-click*/
+    --button-order-click: #404BBF;
+
+    /*background-color-body*/
+    --background-color: #ffffff
+}
+
+body { 
+    font-family: Roboto, sans-serif;
+    background-color: var(--background-color);
+}
+
+
+                                 /*header*/
+
+/*LOGO*/                            
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-brand-color);
+    text-decoration: none;
+}
+
+.studio {
+    color: var(--dark-color);
+}
+
+/*NAV*/
+.nav {
+    list-style-type: none;
+}
+
+.nav .header-link.current {
+    color: var(--nav-click);
+}
+
+.header-link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;        
+    letter-spacing: 0.02em;
+    color: var(--nav-defauit);
+    text-decoration: none;
+}
+
+.header-link:hover {
+    color: var(--nav-click);
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--nav-click);
+}
+
+.header-link:active {
+    color: var(--nav-click);
+}
+
+/*ADDRESS*/
+
+.header-address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;        
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header-address:hover,
+.header-address:focus {
+    color: var(--primary-brand-color);
+
+}
+
+                                  /*main*/
+/*section order-service*/
+.section-order-service {
+    background-color: var(--dark-color);
+}
+
+.order-titel {   
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--background-color);
+}
+
+.button-order {
+    background-color: var(--button-order-defauit);
+    cursor: pointer;
+    border: 0px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.188;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--background-color);
+}
+
+.button-order:hover {
+    background-color: var(--button-order-click);
+}
+
+/*.button-order:active {
+    background-color: var(--button-order-click);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}*/
+
+
+/*sections*/
+.section-titel {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize
+}
+
+.features-links,
+.what-are-we-doing-links, 
+.portfolio-link {
+    list-style-type: none;
+    text-decoration-line: none;
+    background-color: var(--background-color);
+}
+
+.our-team-links {
+    list-style-type: none;
+}
+
+.our-team-link {
+    text-decoration: none;
+    background-color: var(--background-color);
+}
+
+.our-team-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+    text-decoration: none;
+    list-style-type: none;
+}
+ 
+.our-team {
+    background-color: var(--light-color);
+}
+/*для всех тегов <p>, кроме белого в футере*/
+.features .text,
+.our-team .text, 
+.portfolio-links .text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+                                /*css-особенности для страницы portfolio.html*/
+
+/*.filter-buttons*/
+.filter-button {
+    padding: 12px 24px;
+    background: var(--light-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    order: 1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--button-order-defauit);
+}
+                        
+.filter-button:current {
+    background-color: var(--button-order-hover);
+    color: var(--background-color);
+}
+                        
+.filter-button:hover {
+    background-color: var(--button-order-hover);
+    color: var(--background-color);
+}
+                        
+.filter-button:focus {
+    background-color: var(--button-order-hover);
+    color: var(--background-color);
+}
+
+.filter-button.current {
+    background-color: var(--button-order-hover);
+    color: var(--background-color);
+}
+
+
+/*.portfolio-photo {
+    display: inline-flex;
+}*/
+
+.portfolio-filter {
+    text-decoration-line: none;
+    list-style-type: none;
+    /*display: inline-flex;*/
+}
+
+.portfolio-links {
+    list-style-type: none;
+}
+
+.portfolio-link {
+    text-decoration: none;
+    /*display: block;*/
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus,
+.portfolio-filter:active {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+/*только для заголовков h2 со страницы portfolio.html*/
+.portfolio-card-titel {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--dark-color);
+    }   
+
+                                    /*footer*/
+.footer {
+    left: 0px;
+    top: 2283px;
+    background-color: var(--dark-color);
+}
+
+.footer .studio {
+    color: var(--light-color);
+    line-height: 1.17;
+
+}
+                         
+.footer .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}
