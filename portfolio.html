@@ -12,27 +12,35 @@
     <title>Portfolio</title>
 </head>
 
-<body class="container">
+<body>
     <header class="header">
-        <nav>    
+        <div class="nav-container">           
         <!-- Logo -->
-            <a class="logo" href="./index.html">Web<span class="studio">Studio</span></a>
-            <!-- Навигация -->
-            <ul class="nav">
+            <div>    
+                <nav class="logo">
+                <a class="logo-link" href="./index.html">Web<span class="studio">Studio</span></a>
+            </div>
+        <!-- Навигация -->
+            <div>    
+                <ul class="nav">
                 <li><a class="header-link" href="./index.html">Studio</a></li>
                 <li><a class="header-link current" href="./portfolio.html">Portfolio</a></li>
                 <li><a class="header-link" href="">Contacts</a></li>
             </ul> 
         </nav>
-            
-        <!-- Контакты -->
-        <address>
-            <ul class="header-address">
-                <li><a class="header-address" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li><a class="header-address" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-            </ul>
-        </address>
-    </header>
+    </div>
+</div>
+
+<!-- Контакты -->
+<div class="address-container">
+<address>
+    <ul class="header-address">
+        <li><a class="header-add mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a class="header-add tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+    </ul>
+</address>
+</div>
+</header>
         
     <main>
         <!-- Виды деятельности, разделение по фильтру и ссылки -->
@@ -48,76 +56,78 @@
             
         <!-- Ссылки-картинки -->
             <ul class="portfolio-links">
-                <li>
-                    <a class="portfolio-li" href="#">
+                <div class="css-portfolio">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio1.jpg" alt="Bank App View" width="360">
                         <h2 class="portfolio-card-titel">Banking App Interface Concept</h2>
                         <p class="text">App</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio2.jpg" alt="pay with app" width="360">
                         <h2 class="portfolio-card-titel">Cashless Payment</h2>
                         <p class="text">Marketing</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio3.jpg" alt="Laptop and telefon" width="360">
                         <h2 class="portfolio-card-titel">Meditation App</h2>
                         <p class="text">App</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio4.jpg" alt="Telefon in taxi" width="360">
                         <h2 class="portfolio-card-titel">Taxi Service</h2>
                         <p class="text">Marketing</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio5.jpg" alt="Images vor telefon" width="360">
                         <h2 class="portfolio-card-titel">Screen Illustrations</h2>
                         <p class="text">Design</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio6.jpg" alt="Girl mit telefon;" width="360">
                         <h2 class="portfolio-card-titel">Online Courses</h2>
                         <p class="text">Marketing</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio7.jpg" alt="Screenshots Instagram" width="360">
                         <h2 class="portfolio-card-titel">Instagram Stories Concept</h2>
                         <p class="text">Design</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio8.jpg" alt="Food in a bag" width="360">
                         <h2 class="portfolio-card-titel">Organic Food</h2>
                         <p class="text">Web Site</p>
                     </a>
                 </li>
-                <li>
-                    <a class="portfolio-li" href="#">
+                <li class="portfolio-li">
+                    <a class="portfolio-link" href="#">
                         <img src="./images/portfolio9.jpg" alt="Coffee with milk" width="360">
                         <h2 class="portfolio-card-titel">Fresh Coffee</h2>
                         <p class="text">Web Site</p>
                     </a>
                 </li>
+                </div>
             </ul>
         </section>
     </main>
 
     <footer class="footer">
         <!-- Logo --> 
-        <a class="logo" href="./index.html">Web<span class="studio">Studio</span></a>
+        <a class="logo-link" href="./index.html">Web<span class="studio">Studio</span></a>
         <p class="text">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
     </footer>
 </body>
