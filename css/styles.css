@@ -53,7 +53,7 @@ p {
 }
 
 .container {
-    max-width: 1158px;
+    max-width: 1128px;
     padding: 0 15px; 
     margin: 0 auto;
 }
@@ -69,7 +69,7 @@ img {
 
 .header {
     display: flex;
-    max-width: 1158px;
+    /*max-width: 1128px;*/
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
