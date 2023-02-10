@@ -38,7 +38,7 @@ body {
     font-family: Roboto, sans-serif;
     background-color: var(--background-color);
     font-family: Roboto, sans-serif;    
-    max-width: 1440px 100%;
+    max-width: 1440px;
 }
 
 h1,
@@ -53,7 +53,7 @@ p {
 }
 
 .container {
-    max-width: 1128px;
+    max-width: 1158px;
     padding: 0 15px; 
     margin: 0 auto;
 }
@@ -69,12 +69,19 @@ img {
 
 .header {
     display: flex;
-    justify-content: center;
+    max-width: 1158px;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
 }   
 
+.logoandnav {
+    display: flex;
+
+}
+
 /*LOGO*/                            
-.logo {
+.logo-link {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -83,7 +90,7 @@ img {
     text-transform: uppercase;
     color: var(--primary-brand-color);
     text-decoration: none;
-    margin: 24px 0px 24px 156px;
+    /*margin-right: 76px;*/
 }
 
 .studio {
@@ -91,12 +98,21 @@ img {
 }
 
 /*NAV*/
+
+.nav-container {
+    display: flex;
+    /*margin-left: 76px;*/
+}
+
 .nav {
-    display: inline-flex;
-    flex-direction: ;
+    display: flex;
+    gap: 40px;
+    flex-basis: calc((100%-40px)/3);
     list-style-type: none;
     padding-inline-start: 0;
-    margin: 24px 332px 24px 76px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    /*margin: 24px 332px 24px 76px;*/
 }
 
 .nav .header-link.current {
@@ -109,21 +125,11 @@ img {
     line-height: 1.5;        
     letter-spacing: 0.02em;
     color: var(--nav-defauit);
-    padding-right: 40px;
     text-decoration: none;
     text-align: center;
     justify-content: center;
 
 }
-
-/*.nav:last-child {
-    padding-right: 0;
-}*/
-
-.nav .last {
-    padding-right: 0;
-}
-
 
 .header-link:hover {
     color: var(--nav-click);
@@ -143,13 +149,11 @@ img {
 .header-address {
     list-style-type: none;
     display: flex;
+    gap: 40px;
     padding-inline-start: 0;
-    margin-top: 24px;
+    margin: 24px 0 24px 0px;
 }
 
-.header-add.mail {
-    padding-right: 40px;
-}
 
 .header-add {
     font-style: normal;
@@ -180,6 +184,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     outline: 1px solid black;
+    max-width: 1440px auto;
 }
 
 .order-titel {   
@@ -189,10 +194,6 @@ img {
     letter-spacing: 0.02em;
     color: var(--background-color);
     padding: 188px auto 292px;
-}
-
-.button {
-    
 }
 
 .button-order {
@@ -233,16 +234,36 @@ img {
     text-transform: capitalize
 }
 
-.features-li,
+.features-li {
+    display: flex;
+    gap: 24px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}   
+
+.f-li-titel {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2
+}
+
 .what-are-we-doing-links,
 .our-team-links {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+                                    /*!!!!!!!! ВОПРОС !!!!!!!!! */
+
+    /*почему браузер задаёт по умолчанию вот эти отступы ниже 
+    и их постоянно приходится сбрасывать? Возможно ли применить какую-то настройку выше?*/
+    margin-block-start: 0;
+    margin-block-end: 0;
     padding-inline-start: 0;
 }
 
-.f-li {
-    margin: 0 12px;
-}
 
 .f-li:first-child,
 .what-li:first-child,
@@ -256,10 +277,10 @@ img {
     margin-right: auto;
 }
 
-.f-li .text {
+/*.f-li .text {
     width: 264;
     margin: 0;
-}
+}*/
 
 
 .what-li,
@@ -274,7 +295,6 @@ img {
     list-style-type: none;
     text-decoration-line: none;
     background-color: var(--background-color);
-    display: flex
 }
 
 .our-team-links {
@@ -323,7 +343,7 @@ img {
 /*для всех тегов <p>, кроме белого в футере*/
 .features .text,
 .our-team .text, 
-.portfolio-links .text {
+.portfolio-li .text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -332,7 +352,7 @@ img {
 
                                 /*css-особенности для страницы portfolio.html*/
 
-/*.filter-buttons*/
+                                /*.filter-buttons*/
 .filter-button {
     padding: 12px 24px;
     background: var(--light-color);
@@ -376,19 +396,24 @@ img {
 .portfolio-filter {
     text-decoration-line: none;
     list-style-type: none;
-    display: inline-flex;
+    padding-inline-start: 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 96px auto 72px;
 }
 
 .portfolio-links {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-}
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px; 
+    padding-inline-start: 0;
+    }
 
-.portfolio-li {
-    margin: 5px 5px;
+.portfolio-li .text {
+    margin: 8px auto 32px 16px;
 }
 
 .our-team-li,
@@ -410,6 +435,7 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark-color);
+    margin: 32px auto 8px 16px;
     }   
 
                                     /*footer*/
@@ -422,6 +448,17 @@ img {
     text-align: ;
     margin-left: auto;
     margin-right: auto;
+}
+
+.footer .logo-link {
+    margin-top: 100px;
+    margin-left: 156px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
 }
 
 .footer .studio {
