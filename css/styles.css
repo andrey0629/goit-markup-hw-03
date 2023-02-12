@@ -34,11 +34,21 @@
     --background-color: #ffffff
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+
 body { 
     font-family: Roboto, sans-serif;
     background-color: var(--background-color);
     font-family: Roboto, sans-serif;    
-    max-width: 1440px;
+   /* width: 1440px;*/
+    margin: 0 auto;
 }
 
 h1,
@@ -53,30 +63,43 @@ p {
 }
 
 .container {
-    max-width: 1128px;
+    max-width: 1158px;
     padding: 0 15px; 
     margin: 0 auto;
 }
 
 .section {
     padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 img {
-    display: block, max-width: 100%, height: auto
+    display: block; max-width: 100%; height: auto
 }
                                  /*header*/
 
-.header {
+.header-container {
     display: flex;
-    /*max-width: 1128px;*/
+    max-width: 1158px;
+    padding: 0 15px; 
+    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    border-bottom: 1px solid #E7E9FC;
 }   
 
+.navi {
+    display: flex;
+}
 
-/*LOGO*/                            
+/*LOGO*/                
+
+.css-logo {
+    margin: 24px 76px 24px 0;
+}
+
+
 .logo-link {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
@@ -86,7 +109,6 @@ img {
     text-transform: uppercase;
     color: var(--primary-brand-color);
     text-decoration: none;
-    /*margin-right: 76px;*/
 }
 
 .studio {
@@ -95,24 +117,32 @@ img {
 
 /*NAV*/
 
-.nav-container {
-    display: flex;
-    flex-direction: row;
-}
-
 .nav {
     display: flex;
-    gap: 40px;
-    flex-basis: calc((100%-40px)/3);
-    list-style-type: none;
-    padding-inline-start: 0;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-left: 76px;
-
+    justify-content: space-between;    
 }
 
-.nav .header-link.current {
+.css-nav {
+    display: flex;
+    max-width: 261px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-li {
+    list-style-type: none;
+    /*padding-inline-start: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-left: 76px;*/
+    display: flex;
+    width: 261px;
+    gap: 40px;
+    /*flex-basis: calc((100%-80px)/3);
+    justify-content: space-between;*/
+}
+
+.nav-li .header-link.current {
     color: var(--nav-click);
 }
 
@@ -125,6 +155,7 @@ img {
     text-decoration: none;
     text-align: center;
     justify-content: center;
+    padding: 24px 0;
 }
 
 .header-link:hover {
@@ -145,9 +176,9 @@ img {
 .header-address {
     list-style-type: none;
     display: flex;
+    justify-content: space-between;
     gap: 40px;
-    padding-inline-start: 0;
-    margin: 24px 0 24px 0px;
+    /*flex-basis: calc((100%-40px)/2);*/
 }
 
 
@@ -159,6 +190,8 @@ img {
     letter-spacing: 0.02em;
     color: var(--text-color);
     text-decoration: none;
+    padding: 24px 0;
+
 }
 
 .header-add:hover,
@@ -168,6 +201,22 @@ img {
 }
 
                                   /*main*/
+
+                          /* --- для скрытия заголовков --- */
+.hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+
 /*section order-service*/
 .section-order-service {
     background-color: var(--dark-color);
@@ -177,10 +226,8 @@ img {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    outline: 1px solid black;
-    max-width: 1440px auto;
+    /*margin-left: auto;
+    margin-right: auto;*/
 }
 
 .order-titel {   
@@ -193,6 +240,10 @@ img {
 }
 
 .button-order {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
     background-color: var(--button-order-defauit);
     cursor: pointer;
     border: 0px;
@@ -202,11 +253,11 @@ img {
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--background-color);
-    padding: 16px, 32px, 16px, 32px;
-    gap: 10px;
+    padding: 16px 32px 16px 32px;
+    
     Width: 169px;
     Height: 56px;
-    margin: 48px auto
+    margin-top: 48px
 }
  
 .button-order:hover {
@@ -230,12 +281,28 @@ img {
     text-transform: capitalize
 }
 
+.features {
+    padding-bottom: 0;
+}
+
 .features-li {
     display: flex;
+                            /* Возможно, я забываю указать ещё какую-то настройку, 
+                            но только с указанием "flex-basic" вот такая формула ниже 
+                            не работает, я делаю через "gap". 
+                            Насколько я понимаю, это не может быть ошибкой, потому что 
+                            это лишь один из способов, но хотелось бы овладеть всеми и 
+                            понять, почему формула не применяется. 
+                            В комментарии в ХРОМе пишет, чтобы я применил родительскому 
+                            элементу "display: block" 
+                            (The display: block property on the parent element prevents 
+                            flex-basis from having an effect.
+                            Try setting the display: block property on the parent to 
+                            display: flex.),
+                            но что я только не пробовал уже....
+    
+    /*flex-basis: calc((100% - 72px) / 3);*/
     gap: 24px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
 }   
 
 .f-li-titel {
@@ -248,16 +315,8 @@ img {
 .what-are-we-doing-links,
 .our-team-links {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     gap: 24px;
-                                    /*!!!!!!!! ВОПРОС !!!!!!!!! */
-
-    /*почему браузер задаёт по умолчанию вот эти отступы ниже 
-    и их постоянно приходится сбрасывать? Возможно ли применить какую-то настройку выше?*/
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
 }
 
 
@@ -279,10 +338,10 @@ img {
 }*/
 
 
-.what-li,
-.our-team-li,
+.what-are-we-doing-links,
+.our-team-links,
 .portfolio-links {
-    margin: 72px 0 120px 0;
+    margin-top: 72px;
 }
 
 
@@ -306,6 +365,12 @@ img {
 
 .our-team-link {
     text-decoration: none;
+    display: block;
+}
+
+.our-team-text,
+.portfolio-text {
+    margin-top: 32px;
 }
 
 .our-team-name {
@@ -320,13 +385,11 @@ img {
     order: 0;
     flex-grow: 0;
     text-align: center;
-    margin-top: 32px;
     
 }
  
 .our-team-li .text {
     margin-top: 8px;
-    margin-bottom: 32px;
 }
  
 .our-team {
@@ -393,30 +456,34 @@ img {
 .portfolio-filter {
     text-decoration-line: none;
     list-style-type: none;
-    padding-inline-start: 0;
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin-top: 96px;
+    /*margin-top: 96px;*/
     margin-block-end: 0;
 }
 
-.portfolio-links {
-    padding-inline-start: 0;
+.portfolio-li {
+    border: 1px solid #E7E9FC;
 }
 
-.css-portfolio {
+
+.portfolio-links {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px; 
-    padding-inline-start: 0;
+    /*flex-basis: calc((100% - 2*24px) / 3);*/
+}
+
+.portfolio-text {
+    margin-left: 16px;
+    padding-bottom: 32px;
 }
 
 .portfolio-link .text {
-    margin: 8px auto 32px 16px;
-    padding-bottom: 32px;
+    margin-top: 8px;
 }
 
 .our-team-li,
@@ -438,11 +505,11 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark-color);
-    margin: 32px auto 8px 16px;
+   /* margin: 32px auto 8px 16px;*/
     }   
 
 .portfolio-photo {
-    padding-top: 0px;
+    padding-top: 120px;
 }
 
                                     /*footer*/
@@ -458,10 +525,7 @@ img {
 }
 
 .footer .logo-link {
-    margin-top: 100px;
-    margin-left: 156px;
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
@@ -476,12 +540,11 @@ img {
                          
 .footer .text {
     display: block;
-    width: 264px;
+    max-width: 264px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
     color: var(--accent-color);
     margin-top: 16px;
-    margin-left: 156px
 }

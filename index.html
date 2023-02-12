@@ -14,32 +14,34 @@
 </head>
 
 <body>
-    <header class="header container">
-        <div class="nav-container">           
-        <!-- Logo -->
-            <div>    
-                <nav class="logo">
-                <a class="logo-link" href="./index.html">Web<span class="studio">Studio</span></a>
-            </div>
-        <!-- Навигация -->
-            <div>    
-                <ul class="nav">
-                    <li><a class="header-link current" href="./index.html">Studio</a></li>
-                    <li><a class="header-link" href="./portfolio.html">Portfolio</a></li>
-                    <li><a class="header-link last" href="">Contacts</a></li>
-                </ul> 
+    <header class="header">
+        <div class="header-container">           
+            <div class="navi">
+                <nav class="nav">
+                    <!-- Logo -->
+                    <div class="css-logo">    
+                        <a class="logo-link" href="./index.html">Web<span class="studio">Studio</span></a>
+                    </div>
+                    <!-- Навигация -->
+                    <div class="css-nav">    
+                        <ul class="nav-li">
+                            <li><a class="header-link current" href="./index.html">Studio</a></li>
+                            <li><a class="header-link" href="./portfolio.html">Portfolio</a></li>
+                            <li><a class="header-link last" href="">Contacts</a></li>
+                        </ul> 
+                    </div>
                 </nav>
             </div>
-    </div>
-        
-        <!-- Контакты -->
-        <div class="address-container">
-        <address>
-            <ul class="header-address">
-                <li><a class="header-add mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li><a class="header-add tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-            </ul>
-        </address>
+                
+            <!-- Контакты -->
+            <div class="css-address">
+                <address>
+                    <ul class="header-address">
+                        <li><a class="header-add mail" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li><a class="header-add tel" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                    </ul>
+                </address>
+            </div>    
         </div>
     </header>
         
@@ -47,75 +49,93 @@
 
         <!-- Заголовок -->
         <section class="section-order-service section">
-            <h1 class="order-titel">Effective Solutions <br/> for Your Business</h1>    
-            <button type="button" class="button-order">Order Service</button>
+            <div class="container">
+                <h1 class="order-titel">Effective Solutions <br/> for Your Business</h1>    
+                <button type="button" class="button-order">Order Service</button>
+            </div>
         </section>
     
         <!-- Описание -->
-        <section class="features section container">
-            <h2 class="section-titel" hidden>Features</h2>
-            <ul class="features-li">
-                <li class="f-li"><h3 class="f-li-titel">Strategy</h3>
-                    <p class="text">Our goal is to identify the business problem to walk away with the perfect and creative solution. </p></li>
-                <li class="f-li"><h3 class="f-li-titel">Punctuality</h3>
-                    <p class="text">Bring the key message to the brand's audience for the best price within the shortest possible time.</p></li>
-                <li class="f-li"><h3 class="f-li-titel">Diligence</h3>
-                    <p class="text">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p></li>
-                <li class="f-li"><h3 class="f-li-titel">Technologies</h3>
-                    <p class="text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p></li>
-            </ul>
+        <section class="features section">
+            <div class="container">
+                <h2 class="section-titel hidden">Features</h2>
+                <ul class="features-li">
+                    <li class="f-li"><h3 class="f-li-titel">Strategy</h3>
+                        <p class="text">Our goal is to identify the business problem to walk away with the perfect and creative solution. </p></li>
+                    <li class="f-li"><h3 class="f-li-titel">Punctuality</h3>
+                        <p class="text">Bring the key message to the brand's audience for the best price within the shortest possible time.</p></li>
+                    <li class="f-li"><h3 class="f-li-titel">Diligence</h3>
+                        <p class="text">Research and confirm brands that present the strongest digital growth opportunities and minimize risk.</p></li>
+                    <li class="f-li"><h3 class="f-li-titel">Technologies</h3>
+                        <p class="text">Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.</p></li>
+                </ul>
+            </div>
         </section>
             
         <!-- Чем мы занимаемся -->
-        <section class="what-are-we-doing section container">
-            <h2 class="section-titel">What are we doing</h2>
-            <ul class="what-are-we-doing-links">
-                <li class="what-li"><img src="./images/rectangle1.jpg" alt="Laptop" width="360" height="300"></li>
-                <li class="what-li"><img src="./images/rectangle2.jpg" alt="Whatsapp" width="360" height="300"></li>
-                <li class="what-li"><img src="./images/rectangle3.jpg" alt="Device" width="360" height="300"></li>
-            </ul>
+        <section class="what-are-we-doing section">
+            <div class="container">
+                <h2 class="section-titel">What are we doing</h2>
+                <ul class="what-are-we-doing-links">
+                    <li class="what-li"><img src="./images/rectangle1.jpg" alt="Laptop" width="360" height="300"></li>
+                    <li class="what-li"><img src="./images/rectangle2.jpg" alt="Whatsapp" width="360" height="300"></li>
+                    <li class="what-li"><img src="./images/rectangle3.jpg" alt="Device" width="360" height="300"></li>
+                </ul>
+            </div>
         </section>
 
         <!-- Наша команда -->
         <section class="our-team section">
-            <h2 class="section-titel">Our Team</h2>
-            <ul class="our-team-links">
-                <li class="our-team-li">
-                    <a class="our-team-link" href="#">
-                        <img src="./images/team01.jpg" alt="Our Product Designer" width="264" height="260">
-                        <h3 class="our-team-name">Mark Guerrero</h3>
-                        <p class="text">Product Designer</p>
-                    </a>
-                </li>
-                <li class="our-team-li">
+            <div class="container">
+                <h2 class="section-titel">Our Team</h2>
+                <ul class="our-team-links">
+                    <li class="our-team-li">
                         <a class="our-team-link" href="#">
-                        <img src="./images/team02.jpg" alt="Our Frontend Developer" width="264" height="260">
-                        <h3 class="our-team-name">Tom Ford</h3>
-                        <p class="text">Frontend Developer</p>
-                    </a>
-                </li>
-                <li class="our-team-li">
+                            <img src="./images/team01.jpg" alt="Our Product Designer" width="264" height="260">
+                            <div class="our-team-text">
+                                <h3 class="our-team-name">Mark Guerrero</h3>
+                                <p class="text">Product Designer</p>
+                        </div>
+                        </a>
+                    </li>
+                    <li class="our-team-li">
                         <a class="our-team-link" href="#">
-                        <img src="./images/team03.jpg" alt="Our Marketing" width="264" height="260">
-                        <h3 class="our-team-name">Camila Garcia</h3>
-                        <p class="text">Marketing</p>
-                    </a>
-                </li>
-                <li class="our-team-li">
+                            <img src="./images/team02.jpg" alt="Our Frontend Developer" width="264" height="260">
+                            <div class="our-team-text">
+                                <h3 class="our-team-name">Tom Ford</h3>
+                                <p class="text">Frontend Developer</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="our-team-li">
                         <a class="our-team-link" href="#">
-                        <img src="./images/team04.jpg" alt="Our UI Designer" width="264" height="260">
-                        <h3 class="our-team-name">Daniel Wilson</h3>
-                        <p class="text">UI Designer</p>
-                    </a>
-                </li>
-            </ul>
-        </section>
+                            <img src="./images/team03.jpg" alt="Our Marketing" width="264" height="260">
+                            <div class="our-team-text">
+                                <h3 class="our-team-name">Camila Garcia</h3>
+                                <p class="text">Marketing</p> 
+                            </div>
+                        </a>
+                    </li>
+                    <li class="our-team-li">
+                        <a class="our-team-link" href="#">
+                            <img src="./images/team04.jpg" alt="Our UI Designer" width="264" height="260">
+                            <div class="our-team-text">
+                                <h3 class="our-team-name">Daniel Wilson</h3>
+                                <p class="text">UI Designer</p>
+                            </div> 
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer class="footer">
-        <!-- Logo --> 
-        <a class="logo-link" href="./index.html">Web<span class="studio">Studio</span></a>
-        <p class="text">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
+        <div class="container">
+            <!-- Logo --> 
+            <a class="logo-link" href="./index.html">Web<span class="studio">Studio</span></a>
+            <p class="text">Increase the flow of customers and sales for your business with digital marketing & growth solutions.</p>
+        </div>
     </footer>
 </body>
 
