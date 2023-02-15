@@ -39,27 +39,14 @@
 *::after {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 
 body { 
     font-family: Roboto, sans-serif;
     background-color: var(--background-color);
-    font-family: Roboto, sans-serif;    
-   /* width: 1440px;*/
     margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6, 
-p {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .container {
@@ -76,31 +63,26 @@ p {
 img {
     display: block; max-width: 100%; height: auto
 }
-                                 /*header*/
+                                             /*header*/
 
-.header-container {
+.header-cont {
     display: flex;
-    max-width: 1158px;
+    max-width: 1128px;
     padding: 0 15px; 
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    border-bottom: 1px solid #E7E9FC;
-}   
+}
 
-.navi {
-    display: flex;
+.header {
+    border-bottom: 1px solid var(--accent-color);
 }
 
 /*LOGO*/                
 
-.css-logo {
-    margin: 24px 76px 24px 0;
-}
-
-
 .logo-link {
+    display: flex;
+    text-align: left;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -109,6 +91,9 @@ img {
     text-transform: uppercase;
     color: var(--primary-brand-color);
     text-decoration: none;
+    margin-right: 76px;
+    justify-items: center;
+    align-items: center;
 }
 
 .studio {
@@ -122,24 +107,11 @@ img {
     justify-content: space-between;    
 }
 
-.css-nav {
-    display: flex;
-    max-width: 261px;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .nav-li {
-    list-style-type: none;
-    /*padding-inline-start: 0;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    margin-left: 76px;*/
     display: flex;
     width: 261px;
-    gap: 40px;
-    /*flex-basis: calc((100%-80px)/3);
-    justify-content: space-between;*/
+    justify-content: space-between;
+    list-style-type: none;
 }
 
 .nav-li .header-link.current {
@@ -147,6 +119,7 @@ img {
 }
 
 .header-link {
+    display: block;
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;        
@@ -173,16 +146,15 @@ img {
 
 /*ADDRESS*/
 
-.header-address {
+.address {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    /*flex-basis: calc((100%-40px)/2);*/
 }
 
 
-.header-add {
+.address-link {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -194,13 +166,13 @@ img {
 
 }
 
-.header-add:hover,
-.header-add:focus {
+.address-link:hover,
+.address-link:focus {
     color: var(--primary-brand-color);
 
 }
 
-                                  /*main*/
+                                        /*main*/
 
                           /* --- для скрытия заголовков --- */
 .hidden {
@@ -226,8 +198,6 @@ img {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    /*margin-left: auto;
-    margin-right: auto;*/
 }
 
 .order-titel {   
@@ -246,17 +216,14 @@ img {
     line-height: 1.5;
     background-color: var(--button-order-defauit);
     cursor: pointer;
-    border: 0px;
+    border: none;
     border-radius: 4px;
-    font-size: 16px;
-    line-height: 1.188;
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--background-color);
-    padding: 16px 32px 16px 32px;
-    
-    Width: 169px;
-    Height: 56px;
+    align-items: center;
+    width: 169px;
+    height: 56px;
     margin-top: 48px
 }
  
@@ -287,21 +254,6 @@ img {
 
 .features-li {
     display: flex;
-                            /* Возможно, я забываю указать ещё какую-то настройку, 
-                            но только с указанием "flex-basic" вот такая формула ниже 
-                            не работает, я делаю через "gap". 
-                            Насколько я понимаю, это не может быть ошибкой, потому что 
-                            это лишь один из способов, но хотелось бы овладеть всеми и 
-                            понять, почему формула не применяется. 
-                            В комментарии в ХРОМе пишет, чтобы я применил родительскому 
-                            элементу "display: block" 
-                            (The display: block property on the parent element prevents 
-                            flex-basis from having an effect.
-                            Try setting the display: block property on the parent to 
-                            display: flex.),
-                            но что я только не пробовал уже....
-    
-    /*flex-basis: calc((100% - 72px) / 3);*/
     gap: 24px;
 }   
 
@@ -319,31 +271,11 @@ img {
     gap: 24px;
 }
 
-
-.f-li:first-child,
-.what-li:first-child,
-.our-team-li:first-child {
-    margin-left: auto;
-}
-
-.f-li:last-child,
-.what-li:last-child,
-.our-team-li:last-child {
-    margin-right: auto;
-}
-
-/*.f-li .text {
-    width: 264;
-    margin: 0;
-}*/
-
-
 .what-are-we-doing-links,
 .our-team-links,
 .portfolio-links {
     margin-top: 72px;
 }
-
 
 .features-li,
 .what-are-we-doing-links, 
@@ -370,7 +302,7 @@ img {
 
 .our-team-text,
 .portfolio-text {
-    margin-top: 32px;
+    padding: 32px 16px;
 }
 
 .our-team-name {
@@ -385,7 +317,6 @@ img {
     order: 0;
     flex-grow: 0;
     text-align: center;
-    
 }
  
 .our-team-li .text {
@@ -410,9 +341,9 @@ img {
     color: var(--text-color);
 }
 
-                                /*css-особенности для страницы portfolio.html*/
+                         /*css для страницы portfolio.html*/
 
-                                /*.filter-buttons*/
+/*.filter-buttons*/
 .filter-button {
     padding: 12px 24px;
     background: var(--light-color);
@@ -428,11 +359,6 @@ img {
     color: var(--button-order-defauit);
 }
     
-.filter-button:current {
-    background-color: var(--button-order-hover);
-    color: var(--background-color);
-}
-                        
 .filter-button:hover {
     background-color: var(--button-order-hover);
     color: var(--background-color);
@@ -448,25 +374,19 @@ img {
     color: var(--background-color);
 }
 
-
-/*.portfolio-photo {
-    display: inline-flex;
-}*/
-
 .portfolio-filter {
     text-decoration-line: none;
     list-style-type: none;
     display: flex;
     justify-content: center;
     gap: 24px;
-    /*margin-top: 96px;*/
     margin-block-end: 0;
 }
 
+/* portfolio */
 .portfolio-li {
-    border: 1px solid #E7E9FC;
+    width: calc((100% - 48px) / 3);
 }
-
 
 .portfolio-links {
     list-style-type: none;
@@ -474,12 +394,10 @@ img {
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px; 
-    /*flex-basis: calc((100% - 2*24px) / 3);*/
 }
 
-.portfolio-text {
-    margin-left: 16px;
-    padding-bottom: 32px;
+.portfolio-link {
+    border: 1px solid #E7E9FC;
 }
 
 .portfolio-link .text {
@@ -505,21 +423,17 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark-color);
-   /* margin: 32px auto 8px 16px;*/
-    }   
+}   
 
 .portfolio-photo {
-    padding-top: 120px;
+    padding-top: 96px;
 }
 
-                                    /*footer*/
+                                            /*footer*/
 .footer {
-    left: 0px;
-    top: 2283px;
     background-color: var(--dark-color);
     padding-top: 100px;
     padding-bottom: 100px;
-    text-align: ;
     margin-left: auto;
     margin-right: auto;
 }
@@ -535,7 +449,6 @@ img {
 .footer .studio {
     color: var(--light-color);
     line-height: 1.17;
-
 }
                          
 .footer .text {
